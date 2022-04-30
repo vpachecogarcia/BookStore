@@ -2,7 +2,7 @@
 //  LoadableViewModifier.swift
 //  BookStore
 //
-//  Created by sopra on 30/4/22.
+//  Created by Victor Pacheco on 30/4/22.
 //
 
 import SwiftUI
@@ -12,11 +12,12 @@ enum ViewState {
     case error
     case emptyState
     case presenting
+    case paging
 }
 
 struct LoadableViewModifier: ViewModifier {
     
-    @State var state: ViewState
+    @Binding var state: ViewState
     
     func body(content: Content) -> some View {
         switch state {
@@ -28,6 +29,12 @@ struct LoadableViewModifier: ViewModifier {
             emtptyStateView
         case .presenting:
             content
+        case .paging:
+            VStack(spacing: 30) {
+                content
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+            }
         }
     }
     
@@ -42,6 +49,6 @@ struct LoadableViewModifier: ViewModifier {
     private var emtptyStateView: some View {
         Text("EmptyState")
     }
-    
+
 }
     
