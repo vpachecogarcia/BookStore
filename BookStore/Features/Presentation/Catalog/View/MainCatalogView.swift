@@ -13,20 +13,33 @@ struct BookCatalogView: View {
     @State var viewState: ViewState = .loading
     
     var body: some View {
-        contentView
-            .modifier(LoadableViewModifier(state: $viewState))
-            .onChange(of: viewModel.viewState) { newState in
-                viewState = newState
-            }
+        NavigationView {
+            contentView
+                .modifier(LoadableViewModifier(state: $viewState))
+                .onChange(of: viewModel.viewState) { newState in
+                    viewState = newState
+                }
+        }
+        .background(Color.stormCloud)
     }
     
     @ViewBuilder var contentView: some View {
-        if let books = viewModel.books {
-            List(books) {
-                Text($0.title)
+        if !viewModel.books.isEmpty {
+            List(viewModel.books) { book in
+                CatalogRowView(book: book)
+                    // Gives the chance to add a block of logic
+                    .background(GeometryReader { geometry -> Color in
+                        if book == viewModel.books.last && viewState != .paging {
+                            viewModel.paginate()
+                        }
+                        return Color.clear
+                    })
             }
-        } else {
-            EmptyView()
+            .listStyle(.plain)
+            .navigationTitle("Books Catalog")
+            .refreshable {
+                viewModel.reloadData()
+            }
         }
     }
 }

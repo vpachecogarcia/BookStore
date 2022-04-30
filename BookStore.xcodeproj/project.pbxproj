@@ -28,6 +28,8 @@
 		676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */; };
 		676F7D1F281D994B00CBBC12 /* CatalogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D1E281D994B00CBBC12 /* CatalogEntity.swift */; };
 		676F7D22281D99BB00CBBC12 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D21281D99BB00CBBC12 /* PaginationModel.swift */; };
+		676F7D25281DA17600CBBC12 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D24281DA17600CBBC12 /* Color+Extension.swift */; };
+		676F7D27281DACEF00CBBC12 /* CatalogRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D26281DACEF00CBBC12 /* CatalogRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBasicInfoModel.swift; sourceTree = "<group>"; };
 		676F7D1E281D994B00CBBC12 /* CatalogEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogEntity.swift; sourceTree = "<group>"; };
 		676F7D21281D99BB00CBBC12 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
+		676F7D24281DA17600CBBC12 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		676F7D26281DACEF00CBBC12 /* CatalogRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +279,7 @@
 		676F7CFC281D40B700CBBC12 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D23281DA12400CBBC12 /* Extensions */,
 				676F7D20281D99AB00CBBC12 /* Pagination */,
 				676F7CFD281D40C500CBBC12 /* Network */,
 			);
@@ -301,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */,
+				676F7D26281DACEF00CBBC12 /* CatalogRowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,6 +357,14 @@
 				676F7D21281D99BB00CBBC12 /* PaginationModel.swift */,
 			);
 			path = Pagination;
+			sourceTree = "<group>";
+		};
+		676F7D23281DA12400CBBC12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D24281DA17600CBBC12 /* Color+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,8 +511,10 @@
 				676F7D22281D99BB00CBBC12 /* PaginationModel.swift in Sources */,
 				676F7D0D281D4BB700CBBC12 /* Mocks.swift in Sources */,
 				676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */,
+				676F7D25281DA17600CBBC12 /* Color+Extension.swift in Sources */,
 				676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */,
 				676F7D19281D74EB00CBBC12 /* BookBasicInfoEntity.swift in Sources */,
+				676F7D27281DACEF00CBBC12 /* CatalogRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

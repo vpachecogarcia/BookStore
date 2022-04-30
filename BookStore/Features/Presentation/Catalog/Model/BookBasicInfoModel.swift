@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookBasicInfoModel: Identifiable {
+struct BookBasicInfoModel: Identifiable, Equatable {
     let id: Int
     let link: String
     let title: String

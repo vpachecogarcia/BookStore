@@ -41,6 +41,7 @@ final class DefaultCatalogUseCase: CatalogUseCase {
                 if catalog.books.isEmpty {
                     completion(.failure(self.paginationModel.currentPage == 1 ? .emptyData : .noPagesAvailable))
                 } else {
+                    self.paginationModel.currentPage += 1
                     completion(.success(catalog))
                 }
                 

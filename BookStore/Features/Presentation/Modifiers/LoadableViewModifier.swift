@@ -30,11 +30,11 @@ struct LoadableViewModifier: ViewModifier {
         case .presenting:
             content
         case .paging:
-            VStack(spacing: 30) {
+            VStack() {
                 content
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
+                progressView
             }
+            .background(Color.stormCloud)
         }
     }
     
@@ -48,6 +48,13 @@ struct LoadableViewModifier: ViewModifier {
     
     private var emtptyStateView: some View {
         Text("EmptyState")
+    }
+    
+    private var progressView: some View {
+        ProgressView()
+            .progressViewStyle(CircularProgressViewStyle(tint: .white))
+            .frame(width: 48, height: 48)
+            .padding(.vertical, 30)
     }
 
 }

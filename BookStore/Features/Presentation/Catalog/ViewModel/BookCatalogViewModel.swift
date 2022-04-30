@@ -9,7 +9,7 @@ import Foundation
 
 protocol BookCatalogViewModel {
     
-    var books: [BookBasicInfoModel]? { get set }
+    var books: [BookBasicInfoModel] { get set }
     var catalogUseCase: CatalogUseCase { get }
     var viewState: ViewState { get }
     var hasMorePages: Bool { get set }
@@ -21,7 +21,7 @@ protocol BookCatalogViewModel {
 class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
     
     // data
-    @Published var books: [BookBasicInfoModel]?
+    @Published var books = [BookBasicInfoModel]()
     
     
     @Published var viewState: ViewState = .loading
@@ -43,6 +43,7 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
             switch result {
             case .success(let entity):
                 self.bookBuilder(entity: entity)
+                self.hasMorePages = entity.hasMorePages
                 self.stopPaginationLoader()
                 
             case .failure(let error):
@@ -52,12 +53,9 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
     }
     
     private func bookBuilder(entity: CatalogEntity) {
-        var books = [BookBasicInfoModel]()
         entity.books.forEach { bookEntity in
             books.append(BookBasicInfoModel(entity: bookEntity))
         }
-        
-        self.books = books
     }
     
     private func handleError(error: DataTransferError) {
@@ -95,6 +93,7 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
     private func clearData(completion: @escaping ()->()) {
         DispatchQueue.main.async {
             self.viewState = .loading
+            completion()
         }
     }
     
