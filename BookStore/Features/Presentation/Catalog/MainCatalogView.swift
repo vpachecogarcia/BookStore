@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  BookCatalogView.swift
 //  BookStore
 //
 //  Created by Victor Pacheco on 30/4/22.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct BookCatalogView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BookCatalogView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BookCatalogView()
     }
 }

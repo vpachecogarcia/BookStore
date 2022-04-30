@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		676F7CBC281D2F4900CBBC12 /* BookStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CBB281D2F4900CBBC12 /* BookStoreApp.swift */; };
-		676F7CBE281D2F4900CBBC12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CBD281D2F4900CBBC12 /* ContentView.swift */; };
+		676F7CBE281D2F4900CBBC12 /* MainCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */; };
 		676F7CC0281D2F4B00CBBC12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F7CBF281D2F4B00CBBC12 /* Assets.xcassets */; };
 		676F7CC3281D2F4B00CBBC12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 676F7CC2281D2F4B00CBBC12 /* Preview Assets.xcassets */; };
 		676F7CCD281D2F4C00CBBC12 /* BookStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CCC281D2F4C00CBBC12 /* BookStoreTests.swift */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		676F7CB8281D2F4900CBBC12 /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F7CBB281D2F4900CBBC12 /* BookStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreApp.swift; sourceTree = "<group>"; };
-		676F7CBD281D2F4900CBBC12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCatalogView.swift; sourceTree = "<group>"; };
 		676F7CBF281D2F4B00CBBC12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		676F7CC2281D2F4B00CBBC12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		676F7CC8281D2F4C00CBBC12 /* BookStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,8 +94,8 @@
 		676F7CBA281D2F4900CBBC12 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CE5281D35B800CBBC12 /* Features */,
 				676F7CBB281D2F4900CBBC12 /* BookStoreApp.swift */,
-				676F7CBD281D2F4900CBBC12 /* ContentView.swift */,
 				676F7CBF281D2F4B00CBBC12 /* Assets.xcassets */,
 				676F7CC1281D2F4B00CBBC12 /* Preview Content */,
 			);
@@ -125,6 +125,46 @@
 				676F7CD8281D2F4C00CBBC12 /* BookStoreUITestsLaunchTests.swift */,
 			);
 			path = BookStoreUITests;
+			sourceTree = "<group>";
+		};
+		676F7CE5281D35B800CBBC12 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CE6281D35C200CBBC12 /* Data */,
+				676F7CE7281D35C800CBBC12 /* Domain */,
+				676F7CE8281D35D200CBBC12 /* Presentation */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		676F7CE6281D35C200CBBC12 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		676F7CE7281D35C800CBBC12 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		676F7CE8281D35D200CBBC12 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CE9281D366700CBBC12 /* Catalog */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		676F7CE9281D366700CBBC12 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */,
+			);
+			path = Catalog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				676F7CBE281D2F4900CBBC12 /* ContentView.swift in Sources */,
+				676F7CBE281D2F4900CBBC12 /* MainCatalogView.swift in Sources */,
 				676F7CBC281D2F4900CBBC12 /* BookStoreApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
