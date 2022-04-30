@@ -9,12 +9,25 @@ import SwiftUI
 
 struct BookCatalogView: View {
     
-    @StateObject var viewModel = BookCatalogViewModel()
+    @StateObject var viewModel = DefaultBookCatalogViewModel()
+    @State var viewState: ViewState = .loading
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-            .modifier(LoadableViewModifier(state: viewModel.viewState))
+        contentView
+            .modifier(LoadableViewModifier(state: $viewState))
+            .onChange(of: viewModel.viewState) { newState in
+                viewState = newState
+            }
+    }
+    
+    @ViewBuilder var contentView: some View {
+        if let books = viewModel.books {
+            List(books) {
+                Text($0.title)
+            }
+        } else {
+            EmptyView()
+        }
     }
 }
 
