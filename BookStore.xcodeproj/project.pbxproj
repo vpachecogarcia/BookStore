@@ -14,6 +14,15 @@
 		676F7CCD281D2F4C00CBBC12 /* BookStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CCC281D2F4C00CBBC12 /* BookStoreTests.swift */; };
 		676F7CD7281D2F4C00CBBC12 /* BookStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CD6281D2F4C00CBBC12 /* BookStoreUITests.swift */; };
 		676F7CD9281D2F4C00CBBC12 /* BookStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CD8281D2F4C00CBBC12 /* BookStoreUITestsLaunchTests.swift */; };
+		676F7CF1281D395100CBBC12 /* CatalogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CF0281D395100CBBC12 /* CatalogRepository.swift */; };
+		676F7CF3281D39CA00CBBC12 /* RepositoriesInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CF2281D39CA00CBBC12 /* RepositoriesInterface.swift */; };
+		676F7CF5281D3A1000CBBC12 /* CatalogRepositoryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CF4281D3A1000CBBC12 /* CatalogRepositoryParameters.swift */; };
+		676F7CF8281D3B7700CBBC12 /* BookBasicInfoDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CF7281D3B7700CBBC12 /* BookBasicInfoDecodable.swift */; };
+		676F7CFB281D3EEB00CBBC12 /* GenericErrorDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CFA281D3EEB00CBBC12 /* GenericErrorDecodable.swift */; };
+		676F7CFF281D410400CBBC12 /* DataTransferError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7CFE281D410400CBBC12 /* DataTransferError.swift */; };
+		676F7D0D281D4BB700CBBC12 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D0C281D4BB700CBBC12 /* Mocks.swift */; };
+		676F7D12281D57F600CBBC12 /* BookCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D11281D57F600CBBC12 /* BookCatalogViewModel.swift */; };
+		676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D14281D6A6B00CBBC12 /* LoadableViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,15 @@
 		676F7CD2281D2F4C00CBBC12 /* BookStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		676F7CD6281D2F4C00CBBC12 /* BookStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreUITests.swift; sourceTree = "<group>"; };
 		676F7CD8281D2F4C00CBBC12 /* BookStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		676F7CF0281D395100CBBC12 /* CatalogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRepository.swift; sourceTree = "<group>"; };
+		676F7CF2281D39CA00CBBC12 /* RepositoriesInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesInterface.swift; sourceTree = "<group>"; };
+		676F7CF4281D3A1000CBBC12 /* CatalogRepositoryParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRepositoryParameters.swift; sourceTree = "<group>"; };
+		676F7CF7281D3B7700CBBC12 /* BookBasicInfoDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBasicInfoDecodable.swift; sourceTree = "<group>"; };
+		676F7CFA281D3EEB00CBBC12 /* GenericErrorDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorDecodable.swift; sourceTree = "<group>"; };
+		676F7CFE281D410400CBBC12 /* DataTransferError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferError.swift; sourceTree = "<group>"; };
+		676F7D0C281D4BB700CBBC12 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		676F7D11281D57F600CBBC12 /* BookCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCatalogViewModel.swift; sourceTree = "<group>"; };
+		676F7D14281D6A6B00CBBC12 /* LoadableViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,7 @@
 		676F7CBA281D2F4900CBBC12 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CFC281D40B700CBBC12 /* Core */,
 				676F7CE5281D35B800CBBC12 /* Features */,
 				676F7CBB281D2F4900CBBC12 /* BookStoreApp.swift */,
 				676F7CBF281D2F4B00CBBC12 /* Assets.xcassets */,
@@ -130,6 +149,7 @@
 		676F7CE5281D35B800CBBC12 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D0B281D4BA000CBBC12 /* Mocks */,
 				676F7CE6281D35C200CBBC12 /* Data */,
 				676F7CE7281D35C800CBBC12 /* Domain */,
 				676F7CE8281D35D200CBBC12 /* Presentation */,
@@ -159,6 +179,7 @@
 		676F7CE8281D35D200CBBC12 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D13281D6A0D00CBBC12 /* Modifiers */,
 				676F7CE9281D366700CBBC12 /* Catalog */,
 			);
 			path = Presentation;
@@ -167,7 +188,9 @@
 		676F7CE9281D366700CBBC12 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */,
+				676F7D10281D57CD00CBBC12 /* ViewModel */,
+				676F7D0F281D57C600CBBC12 /* Model */,
+				676F7D0E281D57BD00CBBC12 /* View */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -175,6 +198,8 @@
 		676F7CEA281D372600CBBC12 /* Decodables */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CF9281D3E9600CBBC12 /* Errors */,
+				676F7CF6281D3B0F00CBBC12 /* Book */,
 			);
 			path = Decodables;
 			sourceTree = "<group>";
@@ -182,6 +207,7 @@
 		676F7CEB281D373000CBBC12 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CEF281D392200CBBC12 /* Catalog */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -196,6 +222,7 @@
 		676F7CED281D374900CBBC12 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CF2281D39CA00CBBC12 /* RepositoriesInterface.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -205,6 +232,86 @@
 			children = (
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		676F7CEF281D392200CBBC12 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CF0281D395100CBBC12 /* CatalogRepository.swift */,
+				676F7CF4281D3A1000CBBC12 /* CatalogRepositoryParameters.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		676F7CF6281D3B0F00CBBC12 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CF7281D3B7700CBBC12 /* BookBasicInfoDecodable.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		676F7CF9281D3E9600CBBC12 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CFA281D3EEB00CBBC12 /* GenericErrorDecodable.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		676F7CFC281D40B700CBBC12 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CFD281D40C500CBBC12 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		676F7CFD281D40C500CBBC12 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CFE281D410400CBBC12 /* DataTransferError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		676F7D0B281D4BA000CBBC12 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D0C281D4BB700CBBC12 /* Mocks.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		676F7D0E281D57BD00CBBC12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		676F7D0F281D57C600CBBC12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		676F7D10281D57CD00CBBC12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D11281D57F600CBBC12 /* BookCatalogViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		676F7D13281D6A0D00CBBC12 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D14281D6A6B00CBBC12 /* LoadableViewModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +445,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				676F7CBE281D2F4900CBBC12 /* MainCatalogView.swift in Sources */,
+				676F7CF1281D395100CBBC12 /* CatalogRepository.swift in Sources */,
 				676F7CBC281D2F4900CBBC12 /* BookStoreApp.swift in Sources */,
+				676F7CFF281D410400CBBC12 /* DataTransferError.swift in Sources */,
+				676F7CF3281D39CA00CBBC12 /* RepositoriesInterface.swift in Sources */,
+				676F7CF5281D3A1000CBBC12 /* CatalogRepositoryParameters.swift in Sources */,
+				676F7CFB281D3EEB00CBBC12 /* GenericErrorDecodable.swift in Sources */,
+				676F7CF8281D3B7700CBBC12 /* BookBasicInfoDecodable.swift in Sources */,
+				676F7D12281D57F600CBBC12 /* BookCatalogViewModel.swift in Sources */,
+				676F7D0D281D4BB700CBBC12 /* Mocks.swift in Sources */,
+				676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

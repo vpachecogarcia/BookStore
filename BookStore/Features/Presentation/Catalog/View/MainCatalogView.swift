@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct BookCatalogView: View {
+    
+    @StateObject var viewModel = BookCatalogViewModel()
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .modifier(LoadableViewModifier(state: viewModel.viewState))
     }
 }
 
