@@ -140,6 +140,8 @@
 		676F7CE6281D35C200CBBC12 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CEB281D373000CBBC12 /* Repositories */,
+				676F7CEA281D372600CBBC12 /* Decodables */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -147,6 +149,9 @@
 		676F7CE7281D35C800CBBC12 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				676F7CEE281D375400CBBC12 /* UseCases */,
+				676F7CED281D374900CBBC12 /* Interfaces */,
+				676F7CEC281D373B00CBBC12 /* Entities */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -165,6 +170,41 @@
 				676F7CBD281D2F4900CBBC12 /* MainCatalogView.swift */,
 			);
 			path = Catalog;
+			sourceTree = "<group>";
+		};
+		676F7CEA281D372600CBBC12 /* Decodables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Decodables;
+			sourceTree = "<group>";
+		};
+		676F7CEB281D373000CBBC12 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		676F7CEC281D373B00CBBC12 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		676F7CED281D374900CBBC12 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		676F7CEE281D375400CBBC12 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
