@@ -2,7 +2,7 @@
 //  BookStoreUITestsLaunchTests.swift
 //  BookStoreUITests
 //
-//  Created by sopra on 30/4/22.
+//  Created by Victor Pacheco on 30/4/22.
 //
 
 import XCTest
