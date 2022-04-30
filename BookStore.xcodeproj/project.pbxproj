@@ -23,6 +23,9 @@
 		676F7D0D281D4BB700CBBC12 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D0C281D4BB700CBBC12 /* Mocks.swift */; };
 		676F7D12281D57F600CBBC12 /* BookCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D11281D57F600CBBC12 /* BookCatalogViewModel.swift */; };
 		676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D14281D6A6B00CBBC12 /* LoadableViewModifier.swift */; };
+		676F7D17281D6DA700CBBC12 /* CatalogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D16281D6DA700CBBC12 /* CatalogUseCase.swift */; };
+		676F7D19281D74EB00CBBC12 /* BookBasicInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */; };
+		676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		676F7D0C281D4BB700CBBC12 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		676F7D11281D57F600CBBC12 /* BookCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCatalogViewModel.swift; sourceTree = "<group>"; };
 		676F7D14281D6A6B00CBBC12 /* LoadableViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableViewModifier.swift; sourceTree = "<group>"; };
+		676F7D16281D6DA700CBBC12 /* CatalogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUseCase.swift; sourceTree = "<group>"; };
+		676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBasicInfoEntity.swift; sourceTree = "<group>"; };
+		676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBasicInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +221,7 @@
 		676F7CEC281D373B00CBBC12 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 		676F7CEE281D375400CBBC12 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D16281D6DA700CBBC12 /* CatalogUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 		676F7D0F281D57C600CBBC12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -451,10 +460,13 @@
 				676F7CF3281D39CA00CBBC12 /* RepositoriesInterface.swift in Sources */,
 				676F7CF5281D3A1000CBBC12 /* CatalogRepositoryParameters.swift in Sources */,
 				676F7CFB281D3EEB00CBBC12 /* GenericErrorDecodable.swift in Sources */,
+				676F7D17281D6DA700CBBC12 /* CatalogUseCase.swift in Sources */,
 				676F7CF8281D3B7700CBBC12 /* BookBasicInfoDecodable.swift in Sources */,
 				676F7D12281D57F600CBBC12 /* BookCatalogViewModel.swift in Sources */,
 				676F7D0D281D4BB700CBBC12 /* Mocks.swift in Sources */,
+				676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */,
 				676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */,
+				676F7D19281D74EB00CBBC12 /* BookBasicInfoEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

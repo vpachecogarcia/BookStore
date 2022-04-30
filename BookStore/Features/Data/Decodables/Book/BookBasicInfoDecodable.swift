@@ -18,4 +18,4 @@ struct BookBasicInfoDecodable: Codable {
     var title: String?
 }
 
-typealias BookList = [BookBasicInfoDecodable]
+typealias BookListDecodable = [BookBasicInfoDecodable]

@@ -8,8 +8,8 @@
 import Foundation
 
 enum DataTransferError: Error {
-    case service(code: Int, detail: String?)
-    case parse(Error)
+    case service(code: Int, title: String?, detail: String?)
+    case parse
     case emptyData
     case timedOut
 }

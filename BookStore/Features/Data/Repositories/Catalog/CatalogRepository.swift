@@ -18,10 +18,10 @@ final class DefaultCatalogRepository: CatalogRepository {
         let decoder = JSONDecoder()
         
         do {
-            let catalogDecodable = try decoder.decode(BookList.self, from: json)
+            let catalogDecodable = try decoder.decode(BookListDecodable.self, from: json)
             completion(.success(catalogDecodable))
         } catch {
-            let error = DataTransferError.service(code: 400, detail: "BAD REQUEST")
+            let error = DataTransferError.service(code: 400, title: "BAD REQUEST", detail: nil)
             completion(.failure(error))
         }
     }
