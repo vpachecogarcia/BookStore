@@ -26,6 +26,8 @@
 		676F7D17281D6DA700CBBC12 /* CatalogUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D16281D6DA700CBBC12 /* CatalogUseCase.swift */; };
 		676F7D19281D74EB00CBBC12 /* BookBasicInfoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */; };
 		676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */; };
+		676F7D1F281D994B00CBBC12 /* CatalogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D1E281D994B00CBBC12 /* CatalogEntity.swift */; };
+		676F7D22281D99BB00CBBC12 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D21281D99BB00CBBC12 /* PaginationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		676F7D16281D6DA700CBBC12 /* CatalogUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUseCase.swift; sourceTree = "<group>"; };
 		676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBasicInfoEntity.swift; sourceTree = "<group>"; };
 		676F7D1A281D78DC00CBBC12 /* BookBasicInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookBasicInfoModel.swift; sourceTree = "<group>"; };
+		676F7D1E281D994B00CBBC12 /* CatalogEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogEntity.swift; sourceTree = "<group>"; };
+		676F7D21281D99BB00CBBC12 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +225,8 @@
 		676F7CEC281D373B00CBBC12 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */,
+				676F7D1D281D993600CBBC12 /* Catalog */,
+				676F7D1C281D992C00CBBC12 /* Book */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -270,6 +275,7 @@
 		676F7CFC281D40B700CBBC12 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D20281D99AB00CBBC12 /* Pagination */,
 				676F7CFD281D40C500CBBC12 /* Network */,
 			);
 			path = Core;
@@ -321,6 +327,30 @@
 				676F7D14281D6A6B00CBBC12 /* LoadableViewModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		676F7D1C281D992C00CBBC12 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		676F7D1D281D993600CBBC12 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D1E281D994B00CBBC12 /* CatalogEntity.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		676F7D20281D99AB00CBBC12 /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D21281D99BB00CBBC12 /* PaginationModel.swift */,
+			);
+			path = Pagination;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,9 +490,11 @@
 				676F7CF3281D39CA00CBBC12 /* RepositoriesInterface.swift in Sources */,
 				676F7CF5281D3A1000CBBC12 /* CatalogRepositoryParameters.swift in Sources */,
 				676F7CFB281D3EEB00CBBC12 /* GenericErrorDecodable.swift in Sources */,
+				676F7D1F281D994B00CBBC12 /* CatalogEntity.swift in Sources */,
 				676F7D17281D6DA700CBBC12 /* CatalogUseCase.swift in Sources */,
 				676F7CF8281D3B7700CBBC12 /* BookBasicInfoDecodable.swift in Sources */,
 				676F7D12281D57F600CBBC12 /* BookCatalogViewModel.swift in Sources */,
+				676F7D22281D99BB00CBBC12 /* PaginationModel.swift in Sources */,
 				676F7D0D281D4BB700CBBC12 /* Mocks.swift in Sources */,
 				676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */,
 				676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */,

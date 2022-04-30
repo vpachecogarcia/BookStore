@@ -12,4 +12,5 @@ enum DataTransferError: Error {
     case parse
     case emptyData
     case timedOut
+    case noPagesAvailable
 }

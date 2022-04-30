@@ -8,31 +8,41 @@
 import Foundation
 
 protocol CatalogUseCase {
-    func execute(params: CatalogRepositoryParameters, completion: @escaping (Result<BookListEntity, DataTransferError>) -> ())
+    func execute(isReload: Bool?, completion: @escaping (Result<CatalogEntity, DataTransferError>) -> ())
 }
 
 final class DefaultCatalogUseCase: CatalogUseCase {
     
     private let repository: CatalogRepository
+    var paginationModel: PaginationModel
     
     init(repository: CatalogRepository = DefaultCatalogRepository()) {
+        self.paginationModel = PaginationModel(pageSize: Constants.pageSize)
         self.repository = repository
     }
     
-    func execute(params: CatalogRepositoryParameters, completion: @escaping (Result<BookListEntity, DataTransferError>) -> ()) {
+    //MARK: - CatalogUseCase protocol functions
+    
+    func execute(isReload: Bool? = nil, completion: @escaping (Result<CatalogEntity, DataTransferError>) -> ()) {
+        
+        if isReload ?? false {
+            paginationModel.clearData()
+        }
+        
+        let params = CatalogRepositoryParameters(offset: paginationModel.offset, count: paginationModel.pageSize)
         
         let completion = { (result: Result<BookListDecodable, DataTransferError>) in
             switch result {
             case .success(let decodable):
                 
-                var books = [BookBasicInfoEntity]()
-                decodable.forEach { bookDecodable in
-                    if let book = BookBasicInfoEntity(decodable: bookDecodable) {
-                        books.append(book)
-                    }
-                }
+                let catalog = CatalogEntity(decodable: decodable, pageSize: self.paginationModel.pageSize)
+                self.paginationModel.hasMorePages = catalog.hasMorePages
                 
-                books.isEmpty ? completion(.failure(.parse)) : completion(.success(books))
+                if catalog.books.isEmpty {
+                    completion(.failure(self.paginationModel.currentPage == 1 ? .emptyData : .noPagesAvailable))
+                } else {
+                    completion(.success(catalog))
+                }
                 
             case .failure(let error):
                 completion(.failure(error))
@@ -40,5 +50,12 @@ final class DefaultCatalogUseCase: CatalogUseCase {
         }
         
         self.repository.getCatalog(parameters: params, completion: completion)
+    }
+    
+    
+    //MARK: - Constants
+    
+    private enum Constants {
+        static let pageSize: Int = 10
     }
 }

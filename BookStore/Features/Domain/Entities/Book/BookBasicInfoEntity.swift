@@ -19,5 +19,3 @@ struct BookBasicInfoEntity {
         self.title = title
     }
 }
-
-typealias BookListEntity = [BookBasicInfoEntity]
