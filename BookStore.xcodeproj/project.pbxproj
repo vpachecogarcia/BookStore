@@ -30,6 +30,8 @@
 		676F7D22281D99BB00CBBC12 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D21281D99BB00CBBC12 /* PaginationModel.swift */; };
 		676F7D25281DA17600CBBC12 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D24281DA17600CBBC12 /* Color+Extension.swift */; };
 		676F7D27281DACEF00CBBC12 /* CatalogRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D26281DACEF00CBBC12 /* CatalogRowView.swift */; };
+		676F7D2B281DBD2300CBBC12 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D2A281DBD2300CBBC12 /* ErrorView.swift */; };
+		676F7D2D281DBD3000CBBC12 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F7D2C281DBD3000CBBC12 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		676F7D21281D99BB00CBBC12 /* PaginationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 		676F7D24281DA17600CBBC12 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		676F7D26281DACEF00CBBC12 /* CatalogRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRowView.swift; sourceTree = "<group>"; };
+		676F7D2A281DBD2300CBBC12 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		676F7D2C281DBD3000CBBC12 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +197,8 @@
 		676F7CE8281D35D200CBBC12 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				676F7D29281DBCF000CBBC12 /* EmptyState */,
+				676F7D28281DBCDE00CBBC12 /* ErrorView */,
 				676F7D13281D6A0D00CBBC12 /* Modifiers */,
 				676F7CE9281D366700CBBC12 /* Catalog */,
 			);
@@ -367,6 +373,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		676F7D28281DBCDE00CBBC12 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D2A281DBD2300CBBC12 /* ErrorView.swift */,
+			);
+			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		676F7D29281DBCF000CBBC12 /* EmptyState */ = {
+			isa = PBXGroup;
+			children = (
+				676F7D2C281DBD3000CBBC12 /* EmptyStateView.swift */,
+			);
+			path = EmptyState;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,6 +521,8 @@
 			files = (
 				676F7CBE281D2F4900CBBC12 /* MainCatalogView.swift in Sources */,
 				676F7CF1281D395100CBBC12 /* CatalogRepository.swift in Sources */,
+				676F7D2D281DBD3000CBBC12 /* EmptyStateView.swift in Sources */,
+				676F7D2B281DBD2300CBBC12 /* ErrorView.swift in Sources */,
 				676F7CBC281D2F4900CBBC12 /* BookStoreApp.swift in Sources */,
 				676F7CFF281D410400CBBC12 /* DataTransferError.swift in Sources */,
 				676F7CF3281D39CA00CBBC12 /* RepositoriesInterface.swift in Sources */,
