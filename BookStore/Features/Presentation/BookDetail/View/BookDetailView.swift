@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BookDetailView: View {
     
-    var book: BookDetailModel
+    @StateObject var viewModel: DefaultBookDetailViewModel
+    @State var viewState: ViewState = .loading
     
     var body: some View {
         GeometryReader { proxy in
@@ -27,13 +28,19 @@ struct BookDetailView: View {
                 Spacer()
             }
         }
+        .modifier(LoadableViewModifier(state: $viewState,
+                                       reloadPressed: viewModel.fetchData))
+        
+        .onChange(of: viewModel.viewState) { newState in
+            self.viewState = newState
+        }
     }
     
     
     //MARK: - Accessory views
     
     @ViewBuilder private var imageView: some View {
-        if let imageUrl = book.image, let url = URL(string: imageUrl) {
+        if let imageUrl = viewModel.book?.image, let url = URL(string: imageUrl) {
             AsyncImage(url: url) { image in
                 image
                     .resizable()
@@ -61,14 +68,16 @@ struct BookDetailView: View {
         }
     }
     
-    private var titleView: some View {
-        Text(book.title)
-            .font(.title)
-            .fontWeight(.bold)
+    @ViewBuilder private var titleView: some View {
+        if let title = viewModel.book?.title {
+            Text(title)
+                .font(.title)
+                .fontWeight(.bold)
+        }
     }
     
     @ViewBuilder private var authorView: some View {
-        if let author = book.author {
+        if let author = viewModel.book?.author {
             Text("By \(author)")
                 .font(.headline)
                 .fontWeight(.semibold)
@@ -76,7 +85,7 @@ struct BookDetailView: View {
     }
     
     @ViewBuilder private var priceView: some View {
-        if let price = book.price {
+        if let price = viewModel.book?.price {
             HStack {
                 Spacer()
                 Text("\(price.description)€")
@@ -91,10 +100,4 @@ struct BookDetailView: View {
         }
     }
     
-}
-
-struct BookDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        BookDetailView(book: BookDetailModel(image: "https://anylang.net/sites/default/files/styles/book_image/public/covers/a3ewrev_460s.jpg?itok=Z_9aI11b", title: "SteppenWolf", author: "Herman Hesse", price: Decimal(12.99)))
-    }
 }
