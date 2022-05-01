@@ -15,14 +15,16 @@ struct BookCatalogView: View {
     var body: some View {
         NavigationView {
             contentView
-                .modifier(LoadableViewModifier(state: $viewState, reloadPressed: {
-                    viewModel.reloadData()
-                }))
+                .modifier(LoadableViewModifier(state: $viewState,
+                                               backgroundColor: .stormCloud,
+                                               reloadPressed: viewModel.reloadData))
+                          
                 .onChange(of: viewModel.viewState) { newState in
                     withAnimation { viewState = newState }
                 }
+            
+                .background(Color.stormCloud.ignoresSafeArea())
         }
-        .background(Color.stormCloud)
     }
     
     
