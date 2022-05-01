@@ -34,6 +34,7 @@ struct BookCatalogView: View {
         if !viewModel.books.isEmpty {
             List(viewModel.books) { book in
                 CatalogRowView(book: book)
+                    .disabled(viewState == .paging)
                     .onAppear {
                         if book == viewModel.books.last,
                            viewModel.viewState != .paging,
