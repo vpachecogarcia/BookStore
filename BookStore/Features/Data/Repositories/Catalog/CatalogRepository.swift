@@ -9,36 +9,34 @@ import Foundation
 
 final class DefaultCatalogRepository: CatalogRepository {
     
-    private enum Constants {
-        static let path = "/api/v1/items"
+    let mockApi: MockApi
+    
+    init(mockApi: MockApi = DefaultMockApi()) {
+        self.mockApi = mockApi
     }
     
     func getCatalog(parameters: CatalogRepositoryParameters, completion: @escaping (Result<[BookBasicInfoDecodable], DataTransferError>) -> Void) {
         
-        let json = getJson(for: parameters)
-        let decoder = JSONDecoder()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            do {
-                let catalogDecodable = try decoder.decode(BookListDecodable.self, from: json)
-                completion(.success(catalogDecodable))
-            } catch {
-                let error = DataTransferError.service(code: 400, title: "BAD REQUEST", detail: nil)
-                completion(.failure(error))
-            }
+        mockApi.request(resource: getPath(for: parameters), completion: completion)
+    }
+    
+    private func getPath(for params: CatalogRepositoryParameters) -> String {
+        guard let offset = params.offset else {
+            return Constants.page1
+        }
+        if offset < 10 {
+            return Constants.page1
+        } else if offset < 20 {
+            return Constants.page2
+        } else {
+            return Constants.page3
         }
     }
     
-    private func getJson(for params: CatalogRepositoryParameters) -> Data {
-        guard let offset = params.offset else {
-            return Mocks.catalogPage1Success.data
-        }
-        if offset < 10 {
-            return Mocks.catalogPage1Success.data
-        } else if offset < 20 {
-            return Mocks.catalogPage2Success.data
-        } else {
-            return Mocks.catalogEmptyData.data
-        }
+    private enum Constants {
+        static let page1 = "page1"
+        static let page2 = "page2"
+        static let page3 = "emptyData"
     }
     
 }
