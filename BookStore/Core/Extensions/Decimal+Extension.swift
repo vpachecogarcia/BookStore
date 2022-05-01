@@ -8,7 +8,8 @@
 import Foundation
 
 extension Decimal {
-    var priceFormatted: String? {
+    /// formats the price for euro currency  with tho fraction digits
+    var priceEuroFormatted: String? {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2

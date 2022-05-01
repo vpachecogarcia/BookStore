@@ -85,7 +85,7 @@ struct BookDetailView: View {
     }
     
     @ViewBuilder private var priceView: some View {
-        if let price = viewModel.book?.price, let formattedPrice = price.priceFormatted {
+        if let price = viewModel.book?.price, let formattedPrice = price.priceEuroFormatted {
             HStack {
                 Spacer()
                 Text(formattedPrice)

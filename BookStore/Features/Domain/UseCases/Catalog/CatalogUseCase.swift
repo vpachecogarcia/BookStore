@@ -23,6 +23,10 @@ final class DefaultCatalogUseCase: CatalogUseCase {
     
     //MARK: - CatalogUseCase protocol functions
     
+    /// retrieves a page of the catalog
+    /// - Parameters:
+    ///   - isReload: inform true to clear pagination data
+    ///   - completion: the result with a catalog entity or an specific error
     func execute(isReload: Bool? = nil, completion: @escaping (Result<CatalogEntity, DataTransferError>) -> ()) {
         
         if isReload ?? false {

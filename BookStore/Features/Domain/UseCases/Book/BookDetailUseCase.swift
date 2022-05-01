@@ -20,6 +20,10 @@ final class DefaultBookDetailUseCase: BookDetailUseCase {
     }
     
     //MARK: - BoockDetail use case protocol functions
+    /// retrieves the detail of the book given its link
+    /// - Parameters:
+    ///   - link: the path to the item details
+    ///   - completion:  the result with a book detail entity or an specific error
     func execute(link: String, completion: @escaping (Result<BookDetailEntity, DataTransferError>) -> ()) {
         repository.getBookDetail(link: link) { result in
             switch result {
