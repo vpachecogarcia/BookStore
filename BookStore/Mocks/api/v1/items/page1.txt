@@ -6,22 +6,22 @@
     },
     {
         "id": 2,
-        "link": "/api/v1/items/2",
+        "link": "/api/v1/items/wizard_oz",
         "title": "The Wizard of Oz"
     },
     {
         "id": 3,
-        "link": "/api/v1/items/3",
+        "link": "/api/v1/items/search_lost",
         "title": "In Search of Lost Time"
     },
     {
         "id": 4,
-        "link": "/api/v1/items/4",
+        "link": "/api/v1/items/ulysses",
         "title": "Ulysses"
     },
     {
         "id": 5,
-        "link": "/api/v1/items/5",
+        "link": "/api/v1/items/don_quijote",
         "title": "Don Quijote"
     },
     {
