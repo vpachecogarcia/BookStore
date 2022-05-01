@@ -48,6 +48,8 @@
 		6777C8C3281F0FC40086DB76 /* don_quijote.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8C2281F0FC40086DB76 /* don_quijote.txt */; };
 		6777C8C5281F10FD0086DB76 /* great_gatsby.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8C4281F10FD0086DB76 /* great_gatsby.txt */; };
 		6777C8C7281F153D0086DB76 /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8C6281F153D0086DB76 /* Decimal+Extension.swift */; };
+		6777C8CF281F22900086DB76 /* BookDetailUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8CE281F22900086DB76 /* BookDetailUseCaseTest.swift */; };
+		6777C8D3281F232D0086DB76 /* BoodDetailRepositorySuccessMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8D2281F232D0086DB76 /* BoodDetailRepositorySuccessMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		6777C8C2281F0FC40086DB76 /* don_quijote.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = don_quijote.txt; sourceTree = "<group>"; };
 		6777C8C4281F10FD0086DB76 /* great_gatsby.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = great_gatsby.txt; sourceTree = "<group>"; };
 		6777C8C6281F153D0086DB76 /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
+		6777C8CE281F22900086DB76 /* BookDetailUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailUseCaseTest.swift; sourceTree = "<group>"; };
+		6777C8D2281F232D0086DB76 /* BoodDetailRepositorySuccessMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoodDetailRepositorySuccessMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 		676F7CCB281D2F4C00CBBC12 /* BookStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				6777C8D0281F22FF0086DB76 /* Mocks */,
+				6777C8CC281F22740086DB76 /* Domain */,
 				676F7CCC281D2F4C00CBBC12 /* BookStoreTests.swift */,
 			);
 			path = BookStoreTests;
@@ -517,6 +523,38 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6777C8CC281F22740086DB76 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8CD281F227B0086DB76 /* BookDetail */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		6777C8CD281F227B0086DB76 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8CE281F22900086DB76 /* BookDetailUseCaseTest.swift */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		6777C8D0281F22FF0086DB76 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8D1281F23040086DB76 /* Repositories */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		6777C8D1281F23040086DB76 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8D2281F232D0086DB76 /* BoodDetailRepositorySuccessMock.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -691,6 +729,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				676F7CCD281D2F4C00CBBC12 /* BookStoreTests.swift in Sources */,
+				6777C8D3281F232D0086DB76 /* BoodDetailRepositorySuccessMock.swift in Sources */,
+				6777C8CF281F22900086DB76 /* BookDetailUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
