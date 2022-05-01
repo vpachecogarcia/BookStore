@@ -1,0 +1,7 @@
+{
+	"id": 7,
+	"image": "https://d3i5mgdwi2ze58.cloudfront.net/r85zaw5fj98tgc0y5rutjbkmowfy",
+	"title": "The Great Gatsby",
+	"author": "F. Scott Fitzgerald",
+	"price": 16.10
+}

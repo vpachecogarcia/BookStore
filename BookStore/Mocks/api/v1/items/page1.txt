@@ -31,7 +31,7 @@
     },
     {
         "id": 7,
-        "link": "/api/v1/items/7",
+        "link": "/api/v1/items/great_gatsby",
         "title": "The Great Gatsby"
     },
     {
