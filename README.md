@@ -6,3 +6,4 @@
 3. MOCK API uses .txt resource files (not all detail mocks have been added)
 4. All view states (error, empty state, loading) are handled.
 5. Create item functionality has not been developed.
+6. Added test example
