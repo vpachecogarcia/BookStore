@@ -45,6 +45,7 @@
 		6777C8BD281F02D50086DB76 /* steppenwolf.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8BC281F02D50086DB76 /* steppenwolf.txt */; };
 		6777C8BF281F09030086DB76 /* wizard_oz.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8BE281F09030086DB76 /* wizard_oz.txt */; };
 		6777C8C1281F09C90086DB76 /* ulysses.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8C0281F09C90086DB76 /* ulysses.txt */; };
+		6777C8C3281F0FC40086DB76 /* don_quijote.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8C2281F0FC40086DB76 /* don_quijote.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		6777C8BC281F02D50086DB76 /* steppenwolf.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = steppenwolf.txt; sourceTree = "<group>"; };
 		6777C8BE281F09030086DB76 /* wizard_oz.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = wizard_oz.txt; sourceTree = "<group>"; };
 		6777C8C0281F09C90086DB76 /* ulysses.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ulysses.txt; sourceTree = "<group>"; };
+		6777C8C2281F0FC40086DB76 /* don_quijote.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = don_quijote.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +429,7 @@
 				6777C89E281EDC0A0086DB76 /* page1.txt */,
 				6777C8A3281EDF880086DB76 /* page2.txt */,
 				6777C8A5281EE06E0086DB76 /* emptyData.txt */,
+				6777C8C2281F0FC40086DB76 /* don_quijote.txt */,
 				6777C8BC281F02D50086DB76 /* steppenwolf.txt */,
 				6777C8BE281F09030086DB76 /* wizard_oz.txt */,
 				6777C8C0281F09C90086DB76 /* ulysses.txt */,
@@ -613,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6777C8BD281F02D50086DB76 /* steppenwolf.txt in Resources */,
+				6777C8C3281F0FC40086DB76 /* don_quijote.txt in Resources */,
 				6777C8C1281F09C90086DB76 /* ulysses.txt in Resources */,
 				6777C8A6281EE06E0086DB76 /* emptyData.txt in Resources */,
 				676F7CC3281D2F4B00CBBC12 /* Preview Assets.xcassets in Resources */,

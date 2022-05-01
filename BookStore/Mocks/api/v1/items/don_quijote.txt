@@ -1,0 +1,7 @@
+{
+	"id": 5,
+	"image": "https://imagenes.elpais.com/resizer/dcylXF7I3Oej-dyg6rTSbI3G0Ps=/414x0/arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/7BN7MROFVTFLCFQ2FXZPUC3Y3E.jpg",
+	"title": "Don Quijote",
+	"author": "Miguel de Cervantes",
+	"price": 23.80
+}
