@@ -20,10 +20,7 @@ protocol BookCatalogViewModel {
 
 class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
     
-    // data
     @Published var books = [BookBasicInfoModel]()
-    
-    
     @Published var viewState: ViewState = .loading
     let catalogUseCase: CatalogUseCase
     var hasMorePages: Bool = true
@@ -33,11 +30,10 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
         self.fetchData()
     }
     
+    
     //MARK: - Private methods
     
     private func fetchData(isReload: Bool? = nil) {
-        
-        showPagingLoaderIfNeeded()
         
         catalogUseCase.execute(isReload: isReload) { result in
             switch result {
@@ -76,14 +72,6 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
         }
     }
     
-    private func showPagingLoaderIfNeeded() {
-        if viewState == .presenting {
-            DispatchQueue.main.async {
-                self.viewState = .paging
-            }
-        }
-    }
-    
     private func stopPaginationLoader() {
         DispatchQueue.main.async {
             self.viewState = .presenting
@@ -93,9 +81,11 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
     private func clearData(completion: @escaping ()->()) {
         DispatchQueue.main.async {
             self.viewState = .loading
+            self.books.removeAll()
             completion()
         }
     }
+    
     
     //MARK: - Internal methods
     
@@ -111,6 +101,7 @@ class DefaultBookCatalogViewModel: ObservableObject, BookCatalogViewModel {
             self.fetchData(isReload: true)
         }
     }
+    
     
     //MARK: - Constants
     
