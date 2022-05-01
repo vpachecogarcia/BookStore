@@ -15,7 +15,9 @@ struct BookCatalogView: View {
     var body: some View {
         NavigationView {
             contentView
-                .modifier(LoadableViewModifier(state: $viewState))
+                .modifier(LoadableViewModifier(state: $viewState, reloadPressed: {
+                    viewModel.reloadData()
+                }))
                 .onChange(of: viewModel.viewState) { newState in
                     viewState = newState
                 }

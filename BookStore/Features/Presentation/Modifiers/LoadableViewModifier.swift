@@ -18,15 +18,16 @@ enum ViewState {
 struct LoadableViewModifier: ViewModifier {
     
     @Binding var state: ViewState
+    var reloadPressed: () -> ()
     
     func body(content: Content) -> some View {
         switch state {
         case .loading:
             loaderView
         case .error:
-            errorView
+            ErrorView(type: .genericError, reloadPressed: reloadPressed)
         case .emptyState:
-            emtptyStateView
+            ErrorView(type: .emptyState, reloadPressed: reloadPressed)
         case .presenting:
             content
         case .paging:
@@ -39,15 +40,10 @@ struct LoadableViewModifier: ViewModifier {
     }
     
     private var loaderView: some View {
-        Text("Loading")
-    }
-    
-    private var errorView: some View {
-        Text("Error")
-    }
-    
-    private var emtptyStateView: some View {
-        Text("EmptyState")
+        ZStack {
+            Color.stormCloud
+            SpinnerView()
+        }
     }
     
     private var progressView: some View {
