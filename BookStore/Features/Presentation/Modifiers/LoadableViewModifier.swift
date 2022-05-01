@@ -18,6 +18,7 @@ enum ViewState {
 struct LoadableViewModifier: ViewModifier {
     
     @Binding var state: ViewState
+    var backgroundColor: Color?
     var reloadPressed: () -> ()
     
     func body(content: Content) -> some View {
@@ -35,15 +36,16 @@ struct LoadableViewModifier: ViewModifier {
                 content
                 progressView
             }
-            .background(Color.stormCloud)
+            .background(backgroundColor ?? .clear)
         }
     }
     
     private var loaderView: some View {
         ZStack {
-            Color.stormCloud
+            backgroundColor ?? .clear
             SpinnerView()
         }
+        .ignoresSafeArea()
     }
     
     private var progressView: some View {
