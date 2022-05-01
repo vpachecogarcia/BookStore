@@ -1,0 +1,7 @@
+{
+	"id": 1,
+	"image": "https://anylang.net/sites/default/files/styles/book_image/public/covers/a3ewrev_460s.jpg?itok=Z_9aI11b",
+	"title": "Steppenwolf",
+	"author": "Herman Hesse",
+	"price": 12.99
+}
