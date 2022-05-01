@@ -1,0 +1,7 @@
+{
+	"id": 1,
+	"image": "https://d3i5mgdwi2ze58.cloudfront.net/usuab7s8yuwlcmadwx9woy746lvi",
+	"title": "Ulysses",
+	"author": "James Joyce",
+	"price": 19.70
+}
