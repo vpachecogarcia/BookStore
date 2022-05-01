@@ -11,6 +11,7 @@ struct BookCatalogView: View {
     
     @StateObject var viewModel = DefaultBookCatalogViewModel()
     @State var viewState: ViewState = .loading
+    @State var showDialog: Bool = false
     
     var body: some View {
         NavigationView {
@@ -24,6 +25,10 @@ struct BookCatalogView: View {
                 }
             
                 .background(Color.stormCloud.ignoresSafeArea())
+                .navigationBarItems(trailing: addButtonView)
+                .alert(isPresented: $showDialog) {
+                    alertView
+                }
         }
     }
     
@@ -50,6 +55,23 @@ struct BookCatalogView: View {
             }
         }
     }
+
+    
+    private var addButtonView: some View {
+        Button {
+            showDialog.toggle()
+        } label: {
+            Image(systemName: Icons.add)
+                .font(.system(size: 24))
+                .foregroundColor(.weldonBlue)
+        }
+    }
+    
+    private var alertView: Alert {
+        Alert(title: Text(Localizables.alertTitle),
+              message: Text(Localizables.alertMessage),
+              dismissButton: .default(Text(Localizables.alertButton)))
+    }
     
     
     // MARK - Private methods
@@ -64,7 +86,14 @@ struct BookCatalogView: View {
     
     // MARK - Constants
     
-    enum Localizables {
+    private enum Localizables {
         static let navigationTitle = "Books Catalog"
+        static let alertTitle = "We're sorry"
+        static let alertMessage = "This feature is not available yet"
+        static let alertButton = "Ok"
+    }
+    
+    private enum Icons {
+        static let add = "plus"
     }
 }
