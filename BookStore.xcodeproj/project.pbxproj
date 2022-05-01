@@ -35,6 +35,10 @@
 		6777C89F281EDC0A0086DB76 /* page1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C89E281EDC0A0086DB76 /* page1.txt */; };
 		6777C8A4281EDF880086DB76 /* page2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8A3281EDF880086DB76 /* page2.txt */; };
 		6777C8A6281EE06E0086DB76 /* emptyData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6777C8A5281EE06E0086DB76 /* emptyData.txt */; };
+		6777C8AA281EE9690086DB76 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8A9281EE9690086DB76 /* BookDetailView.swift */; };
+		6777C8AC281EF44D0086DB76 /* BookDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8AB281EF44D0086DB76 /* BookDetailModel.swift */; };
+		6777C8AF281EF4E00086DB76 /* BookDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8AE281EF4E00086DB76 /* BookDetailEntity.swift */; };
+		6777C8B1281EF5280086DB76 /* BookDetailDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6777C8B0281EF5280086DB76 /* BookDetailDecodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		6777C89E281EDC0A0086DB76 /* page1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = page1.txt; sourceTree = "<group>"; };
 		6777C8A3281EDF880086DB76 /* page2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = page2.txt; sourceTree = "<group>"; };
 		6777C8A5281EE06E0086DB76 /* emptyData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = emptyData.txt; sourceTree = "<group>"; };
+		6777C8A9281EE9690086DB76 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		6777C8AB281EF44D0086DB76 /* BookDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailModel.swift; sourceTree = "<group>"; };
+		6777C8AE281EF4E00086DB76 /* BookDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailEntity.swift; sourceTree = "<group>"; };
+		6777C8B0281EF5280086DB76 /* BookDetailDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailDecodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,10 +211,11 @@
 		676F7CE8281D35D200CBBC12 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				676F7D2E281DBDA500CBBC12 /* SpinnerView */,
+				6777C8A7281EE9430086DB76 /* BookDetail */,
+				676F7CE9281D366700CBBC12 /* Catalog */,
 				676F7D28281DBCDE00CBBC12 /* ErrorView */,
 				676F7D13281D6A0D00CBBC12 /* Modifiers */,
-				676F7CE9281D366700CBBC12 /* Catalog */,
+				676F7D2E281DBDA500CBBC12 /* SpinnerView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				676F7CF7281D3B7700CBBC12 /* BookBasicInfoDecodable.swift */,
+				6777C8B0281EF5280086DB76 /* BookDetailDecodable.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -352,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				676F7D18281D74EB00CBBC12 /* BookBasicInfoEntity.swift */,
+				6777C8AE281EF4E00086DB76 /* BookDetailEntity.swift */,
 			);
 			path = Book;
 			sourceTree = "<group>";
@@ -420,6 +431,31 @@
 				6777C8A0281EDC6C0086DB76 /* items */,
 			);
 			path = v1;
+			sourceTree = "<group>";
+		};
+		6777C8A7281EE9430086DB76 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8AD281EF4560086DB76 /* Model */,
+				6777C8A8281EE95A0086DB76 /* View */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		6777C8A8281EE95A0086DB76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8A9281EE9690086DB76 /* BookDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6777C8AD281EF4560086DB76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6777C8AB281EF44D0086DB76 /* BookDetailModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,13 +604,17 @@
 				676F7D17281D6DA700CBBC12 /* CatalogUseCase.swift in Sources */,
 				676F7CF8281D3B7700CBBC12 /* BookBasicInfoDecodable.swift in Sources */,
 				676F7D12281D57F600CBBC12 /* BookCatalogViewModel.swift in Sources */,
+				6777C8AA281EE9690086DB76 /* BookDetailView.swift in Sources */,
 				676F7D30281DBDC200CBBC12 /* SpinnerView.swift in Sources */,
 				676F7D22281D99BB00CBBC12 /* PaginationModel.swift in Sources */,
 				676F7D1B281D78DC00CBBC12 /* BookBasicInfoModel.swift in Sources */,
 				676F7D25281DA17600CBBC12 /* Color+Extension.swift in Sources */,
 				676F7D15281D6A6B00CBBC12 /* LoadableViewModifier.swift in Sources */,
+				6777C8AC281EF44D0086DB76 /* BookDetailModel.swift in Sources */,
 				676F7D19281D74EB00CBBC12 /* BookBasicInfoEntity.swift in Sources */,
+				6777C8B1281EF5280086DB76 /* BookDetailDecodable.swift in Sources */,
 				676F7D27281DACEF00CBBC12 /* CatalogRowView.swift in Sources */,
+				6777C8AF281EF4E00086DB76 /* BookDetailEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
